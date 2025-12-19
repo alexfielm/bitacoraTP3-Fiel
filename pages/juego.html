@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia - Tech4all</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .game-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            margin: 0 auto;
+        }
+
+        .question-container {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            padding: 12px 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option:hover {
+            background-color: #e9e9e9;
+        }
+
+        .option.selected {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+
+
+        .progress {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        /* Dark mode overrides for the card specifically if needed, 
+           though global dark mode classes might handle some. 
+           Adding explicit support for the card components */
+        body.dark-mode .game-card {
+            background-color: #2d2d2d;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .question {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .option {
+            background-color: #3d3d3d;
+            border-color: #555;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .option:hover {
+            background-color: #4d4d4d;
+        }
+
+        body.dark-mode .option.selected {
+            background-color: #1e4620;
+            border-color: #2e6630;
+        }
+
+        body.dark-mode .progress {
+            color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Tech4all</a>
+            <ul class="nav-links" id="myLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./juego.html" class="active">Juego</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><button id="mode-toggle" class="btn btn-sm">Modo oscuro</button></li>
+                <li><button id="donate-btn" class="btn btn-sm">Donar</button></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+        </div>
+    </nav>
+
+    <main>
+        <section style="padding-top: 2rem; padding-bottom: 2rem;">
+            <div class="container">
+                <div class="game-card">
+                    <h1 style="text-align: center; margin-bottom: 1.5rem;">Trivia desarrollo web</h1>
+                    <div class="progress">Pregunta <span id="current-question">1</span> de 5</div>
+
+                    <div id="quiz-container">
+
+                    </div>
+
+                    <div class="button-container">
+                        <button id="submit-btn" class="btn">Enviar Respuestas</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>Tech4all</h3>
+                <p>&copy; 2025 Tech4all ONG. Juntos construimos el futuro.</p>
+            </div>
+            <div class="footer-sitemap">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./proyectos.html">Proyectos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-action">
+                <button id="back-to-top" class="btn btn-sm" title="Volver arriba">
+                    Volver Arriba
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>¡Gracias por tu apoyo!</h2>
+            <p>Tu donación nos ayuda a seguir brindando educación gratuita.</p>
+            <div class="donation-options">
+                <button class="btn">$10</button>
+                <button class="btn">$25</button>
+                <button class="btn">$50</button>
+            </div>
+            <button id="confirm-donate-btn" class="btn" style="width: 100%; margin-top: 1rem;" disabled>Donar</button>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

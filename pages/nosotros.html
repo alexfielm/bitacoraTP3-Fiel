@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Tech4all</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Tech4all</a>
+            <ul class="nav-links" id="myLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./juego.html">Juego</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><button id="mode-toggle" class="btn btn-sm">Modo oscuro</button></li>
+                <li><button id="donate-btn" class="btn btn-sm">Donar</button></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-us" style="padding: 4rem 0;">
+            <div class="container">
+                <h1 style="text-align: center; margin-bottom: 3rem; color: var(--primary-color);">Sobre Nosotros</h1>
+
+                <article class="about-card">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Nuestra Historia</h2>
+                    <img src="../assets/imgHistoria1.png" alt="" width="800" height="600" class="img-responsive">
+                    <p style="font-size: 1.1rem; line-height: 1.6;">Tech4all nació en 2020, en plena pandemia, cuando un
+                        grupo de desarrolladores notó una realidad alarmante: muchos estudiantes talentosos estaban
+                        quedando fuera del sistema educativo simplemente por falta de recursos tecnológicos.
+                        Como se ve en la foto de nuestros primeros días, lo que comenzó como una colecta solidaria
+                        artesanal de computadoras usadas para una emergencia momentánea, pronto nos reveló un desafío
+                        mucho mayor: la brecha económica estructural que frenaba el talento.</p>
+                    <img src="../assets/imgHistoria2.png" alt="" width="800" height="600" class="img-responsive">
+                    <p style="font-size: 1.1rem; line-height: 1.6;">Esa iniciativa inicial se transformó. Entendimos que
+                        el hardware era solo el primer paso; de nada servía una computadora sin el conocimiento para
+                        usarla como herramienta de cambio. Pasamos de reparar equipos a construir futuros.
+                        Hoy, como organización sólida, ampliamos nuestro horizonte para dirigirnos a chicos y jóvenes de
+                        todas las edades que sueñan con aprender a programar. Impulsados por la colaboración y el
+                        networking que ves en nuestras aulas, trabajamos para asegurar que la educación tech de calidad
+                        sea un derecho y no un privilegio, brindando las herramientas necesarias para que cualquier
+                        persona pueda desenvolverse y liderar en el mundo digital.</p>
+                </article>
+
+                <div style="display: grid; gap: 4rem;">
+                    <article class="about-card">
+                        <h2 style="color: var(--primary-color); margin-top: 1rem;">Misión</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.6;">Nuestra misión es que todos los chicos de todas
+                            las edades tengan acceso a una computadora para aprender a programar y desenvolverse en el
+                            área de la programación.</p>
+                        <h2 style="color: var(--primary-color); margin-top: 1rem;">Visión</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.6;">Queremos ser la ONG que termine con la brecha
+                            económica que impide a muchas personas sin acceso a computadoras poder aprender y
+                            desenvolverse en el mundo tech.</p>
+                        <h2 style="color: var(--primary-color); margin-top: 1rem;">Valores</h2>
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; font-size: 1.1rem; line-height: 1.6;">
+                            <li style="margin-bottom: 0.5rem;">Creemos que una educación de calidad es un derecho, no un
+                                privilegio.</li>
+                            <li style="margin-bottom: 0.5rem;">Nos esforzamos por estar al día con las tecnologías
+                                emergentes.</li>
+                            <li>Impulsamos el trabajo en conjunto para fomentar el trabajo en equipo y networking.</li>
+                        </ul>
+                    </article>
+
+
+                    <article class="about-card" style="text-align: center;">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Nuestro Equipo</h2>
+                        <div
+                            style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <div style="text-align: center;">
+                                <img src="../assets/personalEquipo1.png" alt="Equipo Tech4all1"
+                                    style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                                <p style="margin-top: 0.5rem; font-weight: bold;">Ruben</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <img src="../assets/fotoEquipo.jpeg" alt="Equipo Tech4all2"
+                                    style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                                <p style="margin-top: 0.5rem; font-weight: bold;">Alex</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <img src="../assets/personalEquipo2.png" alt="Equipo Tech4all3"
+                                    style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                                <p style="margin-top: 0.5rem; font-weight: bold;">Daniela</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 1.1rem; line-height: 1.6;">Detrás de Tech4all hay un equipo apasionado de
+                            educadores, desarrolladores y voluntarios comprometidos con la inclusión digital. Trabajamos
+                            día
+                            a día para crear oportunidades y transformar vidas a través de la tecnología.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>Tech4all</h3>
+                <p>&copy; 2025 Tech4all ONG. Juntos construimos el futuro.</p>
+            </div>
+            <div class="footer-sitemap">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./proyectos.html">Proyectos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-action">
+                <button id="back-to-top" class="btn btn-sm" title="Volver arriba">
+                    Volver Arriba
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>¡Gracias por tu apoyo!</h2>
+            <p>Tu donación nos ayuda a seguir brindando educación gratuita.</p>
+            <div class="donation-options">
+                <button class="btn">$10</button>
+                <button class="btn">$25</button>
+                <button class="btn">$50</button>
+            </div>
+            <button id="confirm-donate-btn" class="btn" style="width: 100%; margin-top: 1rem;" disabled>Donar</button>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

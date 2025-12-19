@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tech4all</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Tech4all</a>
+            <ul class="nav-links" id="myLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./juego.html">Juego</a></li>
+                <li><a href="./contacto.html" class="active">Contacto</a></li>
+                <li><button id="mode-toggle" class="btn btn-sm">Modo oscuro</button></li>
+                <li><button id="donate-btn" class="btn btn-sm">Donar</button></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact" style="padding: 4rem 0;">
+            <div class="container">
+                <h1 style="text-align: center; margin-bottom: 3rem; color: var(--primary-color);">Contáctanos</h1>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+
+                    <div class="contact-info">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Información de Contacto</h2>
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem;">¿Tienes alguna pregunta o quieres colaborar
+                            con nosotros? ¡Nos encantaría escucharte! Si deseas hacer alguna donacion de algun equipo
+                            tecnologico que ya no uses, por favor contactanos, podria ser de mucha ayuda para alguien
+                            que lo necesite.</p>
+                        <ul style="list-style: none; font-size: 1.1rem;">
+                            <li style="margin-bottom: 1rem;"><strong>Email:</strong> contacto@tech4all.org</li>
+                            <li style="margin-bottom: 1rem;"><strong>Teléfono:</strong> +54 11 1234-5678</li>
+                            <li style="margin-bottom: 1rem;"><strong>Dirección:</strong> Av. Tecnología 123, Buenos
+                                Aires, Argentina</li>
+                        </ul>
+                    </div>
+
+
+                    <form class="contact-form">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="name"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre</label>
+                            <input type="text" id="name" name="name"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem;"
+                                required>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="email"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email</label>
+                            <input type="email" id="email" name="email"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem;"
+                                required>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="message"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Mensaje</label>
+                            <textarea id="message" name="message" rows="4"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem; resize: none;"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>Tech4all</h3>
+                <p>&copy; 2025 Tech4all ONG. Juntos construimos el futuro.</p>
+            </div>
+            <div class="footer-sitemap">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./proyectos.html">Proyectos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-action">
+                <button id="back-to-top" class="btn btn-sm" title="Volver arriba">
+                    Volver Arriba
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>¡Gracias por tu apoyo!</h2>
+            <p>Tu donación nos ayuda a seguir brindando educación gratuita.</p>
+            <div class="donation-options">
+                <button class="btn">$10</button>
+                <button class="btn">$25</button>
+                <button class="btn">$50</button>
+            </div>
+            <button id="confirm-donate-btn" class="btn" style="width: 100%; margin-top: 1rem;" disabled>Donar</button>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

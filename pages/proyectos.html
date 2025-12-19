@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Tech4all</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Tech4all</a>
+            <ul class="nav-links" id="myLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./proyectos.html" class="active">Proyectos</a></li>
+                <li><a href="./juego.html">Juego</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><button id="mode-toggle" class="btn btn-sm">Modo oscuro</button></li>
+                <li><button id="donate-btn" class="btn btn-sm">Donar</button></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="projects" style="padding-top: 2rem;">
+            <div class="container">
+                <h2>Nuestros Proyectos</h2>
+                <p style="text-align: center; margin-bottom: 3rem;">Estos son algunos de nuestros proyectos</p>
+                <div class="project-grid">
+                    <!-- Program Card 1 -->
+                    <a href="./proyecto1.html" class="project-card">
+                        <img src="../assets/bootcamps.avif" alt="Cursos Introducción al Desarrollo Web"
+                            class="project-img">
+                        <div class="project-info">
+                            <h3>Cursos Introducción al Desarrollo Web</h3>
+                            <p>Este curso te dará una pequeña introducción al mundo del desarrollo web.</p>
+                        </div>
+                    </a>
+                    <!-- Program Card 2 -->
+                    <article class="project-card">
+                        <img src="../assets/donacion.webp" alt="Colecta de computadoras" class="project-img">
+                        <div class="project-info">
+                            <h3>Colecta de computadoras o dinero para ellas a través de donaciones por la web</h3>
+                            <p>Con la ayuda de la comunidad, logramos prestar computadoras a los estudiantes que las
+                                necesitaban para realizar los cursos.</p>
+                        </div>
+                    </article>
+                    <!-- Program Card 3 -->
+                    <article class="project-card">
+                        <img src="../assets/cursoOnline.avif" alt="Cursos online" class="project-img">
+                        <div class="project-info">
+                            <h3>Cursos online pregrabados de acceso gratuito</h3>
+                            <p>Los cursos son de acceso gratuito para todos los que lo deseen.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>Tech4all</h3>
+                <p>&copy; 2025 Tech4all ONG. Juntos construimos el futuro.</p>
+            </div>
+            <div class="footer-sitemap">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./proyectos.html">Proyectos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-action">
+                <button id="back-to-top" class="btn btn-sm" title="Volver arriba">
+                    Volver Arriba
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>¡Gracias por tu apoyo!</h2>
+            <p>Tu donación nos ayuda a seguir brindando educación gratuita.</p>
+            <div class="donation-options">
+                <button class="btn">$10</button>
+                <button class="btn">$25</button>
+                <button class="btn">$50</button>
+            </div>
+            <button id="confirm-donate-btn" class="btn" style="width: 100%; margin-top: 1rem;" disabled>Donar</button>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

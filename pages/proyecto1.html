@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso web - Tech4all</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Tech4all</a>
+            <ul class="nav-links" id="myLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./juego.html">Juego</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><button id="mode-toggle" class="btn btn-sm">Modo oscuro</button></li>
+                <li><button id="donate-btn" class="btn btn-sm">Donar</button></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+        </div>
+    </nav>
+
+    <main>
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <h1 style="text-align: center; margin-bottom: 3rem; color: var(--primary-color);">Fundamentos del
+                    Desarrollo Web: Tu Primer Paso</h1>
+                <div class="project-detail" style="max-width: 800px; margin: 0 auto;">
+                    <article class="about-card">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">1. El Esqueleto: HTML</h2>
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem;">El lenguaje HTML (HyperText Markup Language)
+                            es el cimiento de cualquier sitio. Su propósito principal es definir la estructura y la
+                            semántica del contenido. Piensa en él como el plano de una casa: le dice al navegador qué es
+                            un título, qué es un párrafo y dónde va una imagen.</p>
+                        <p style="font-size: 1.1rem;">Un aspecto vital de HTML es la accesibilidad. Por ejemplo, cuando
+                            insertamos una imagen, usamos el atributo <strong>alt</strong>. Este sirve para proporcionar
+                            un texto descriptivo que se muestra si la imagen no carga o para que los lectores de
+                            pantalla se lo dicten a personas con discapacidad visual.</p>
+                    </article>
+
+                    <article class="about-card">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">2. El Estilo: CSS</h2>
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem;">Una vez que tenemos la estructura,
+                            necesitamos que se vea bien. CSS (Cascading Style Sheets) se encarga de los colores,
+                            tipografías y el diseño visual.</p>
+                        <p style="font-size: 1.1rem;">En la actualidad, los usuarios navegan desde celulares, tablets y
+                            computadoras. Para que un sitio sea "responsivo" (que se adapte a cualquier pantalla), los
+                            desarrolladores utilizamos una técnica fundamental llamada <strong>Media Queries</strong>.
+                            Estas nos permiten aplicar reglas de estilo específicas dependiendo del tamaño de la
+                            pantalla del dispositivo.</p>
+                    </article>
+
+                    <article class="about-card">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">3. La Inteligencia: JavaScript
+                        </h2>
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem;">Si HTML es el esqueleto y CSS es la pintura,
+                            JavaScript es el sistema nervioso. Es el lenguaje que permite que la página haga cosas:
+                            enviar formularios, animaciones complejas o procesar datos.</p>
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem;">En JavaScript, solemos trabajar con listas de
+                            datos llamadas arreglos (Arrays). Para manipular estos datos de forma elegante, usamos
+                            métodos modernos:</p>
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; font-size: 1.1rem;">
+                            <li style="margin-bottom: 1rem;"><strong>Método .map():</strong> Se utiliza cuando queremos
+                                transformar los datos. Crea un nuevo arreglo aplicando una función a cada elemento del
+                                original (por ejemplo, tomar una lista de precios y devolver una lista con los precios
+                                más el IVA).</li>
+                            <li><strong>Método .filter():</strong> Se usa cuando queremos seleccionar solo ciertos
+                                elementos. Crea un nuevo arreglo que contiene únicamente los elementos que cumplen una
+                                condición específica (por ejemplo, filtrar solo los productos que cuestan menos de 50
+                                dólares).</li>
+                        </ul>
+                    </article>
+                    <article class="about-card cta-card" style="text-align: center;">
+                        <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">¿Estás listo para el desafío? Ahora que has
+                            leído los fundamentos, pon a prueba tus conocimientos con nuestra trivia de 5 preguntas
+                            resolviendo la siguiente trivia.</p>
+                        <a href="./juego.html" class="btn">Responder trivia</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>Tech4all</h3>
+                <p>&copy; 2025 Tech4all ONG. Juntos construimos el futuro.</p>
+            </div>
+            <div class="footer-sitemap">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./proyectos.html">Proyectos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-action">
+                <button id="back-to-top" class="btn btn-sm" title="Volver arriba">
+                    Volver Arriba
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>¡Gracias por tu apoyo!</h2>
+            <p>Tu donación nos ayuda a seguir brindando educación gratuita.</p>
+            <div class="donation-options">
+                <button class="btn">$10</button>
+                <button class="btn">$25</button>
+                <button class="btn">$50</button>
+            </div>
+            <button id="confirm-donate-btn" class="btn" style="width: 100%; margin-top: 1rem;" disabled>Donar</button>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
