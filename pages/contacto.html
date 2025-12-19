@@ -54,7 +54,7 @@
                     </div>
 
 
-                    <form class="contact-form">
+                    <form class="contact-form" id="contact-form">
                         <div style="margin-bottom: 1.5rem;">
                             <label for="name"
                                 style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre</label>
@@ -120,6 +120,12 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("7G1je4EInz3bS4cee");
+        })();
+    </script>
     <script src="../script.js"></script>
 
 </body>

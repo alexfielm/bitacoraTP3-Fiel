@@ -234,3 +234,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const form = document.getElementById("contact-form");
+
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_o8y0ayn",
+            "template_qhqmfs5",
+            this
+        )
+            .then(() => {
+                alert("Revisa el mail de confirmación");
+                form.reset();
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Error, no se pudo mandar el mail, por favor intentalo de nuevo");
+            });
+    });
+}
+
